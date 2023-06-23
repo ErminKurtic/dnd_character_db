@@ -1,0 +1,186 @@
+.home-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+  margin-left: 7rem;
+}
+
+table {
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-spacing: 0;
+  margin: 25px 0;
+  font-size: 0.9em;
+  font-family: sans-serif;
+  font-weight: bold;
+  min-width: 300px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+}
+
+.table thead tr th:first-of-type {
+  border-top-left-radius: 1rem;
+}
+
+.table thead tr th:last-of-type {
+  border-top-right-radius: 1rem;
+}
+
+.table thead tr {
+  background-color: var(--color-border-primary);
+  text-transform: uppercase;
+  color: white;
+  border-radius: 1rem;
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+}
+
+.table tbody tr {
+  border-bottom: 1px solid #dddddd;
+  background-color: var(--color-bg-secondary-light);
+}
+
+.table tbody tr:nth-of-type(even) {
+  background-color: var(--color-bg-secondary);
+}
+
+/* - - - BUTTONS - - - */
+
+.table__button--edit,
+.table__button--delete {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.table__button--edit:hover,
+.table__button--delete:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  color: var(--color-border-secondary);
+  border-color: var(--color-border-secondary);
+}
+
+.table__button--edit:disabled,
+.table__button--delete:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.table__button--edit:active,
+.table__button--delete:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.table__button--edit:focus,
+.table__button--delete:focus {
+  outline: 1px transparent;
+}
+
+.table__button--edit:before,
+.table__button--delete:before {
+  display: none;
+}
+
+.table__button--edit:-webkit-details-marker,
+.table__button--delete:-webkit-details-marker {
+  display: none;
+}
+
+.table__button--edit,
+.table__button--delete {
+  margin: 0.5rem;
+}
+
+/* - - - MEDIA QUERY - - - */
+
+@media screen and (max-width: 650px) {
+  .home-container {
+    margin-left: 3rem;
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  table thead {
+    border: none;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+
+  .table__header--description {
+    min-width: 300px;
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: 0.625em;
+  }
+
+  table td {
+    border-bottom: 1px solid #ddd;
+    display: block;
+    font-size: 0.8em;
+    padding-right: 1rem;
+    text-align: right;
+  }
+
+  table td::before,
+  tbody th::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table th:first-of-type {
+    letter-spacing: 0.5rem;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+
+  table td:last-of-type {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .home-container {
+    transition: 0.4s;
+  }
+}

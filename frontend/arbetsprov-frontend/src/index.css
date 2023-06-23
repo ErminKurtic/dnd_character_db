@@ -1,0 +1,30 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+:root {
+  --color-bg-primary: #494231;
+  --color-bg-secondary: #9e895f;
+  --color-bg-secondary-light: #d5c79f;
+
+  --color-border-primary: #ae5433;
+  --color-border-secondary: #aa462d;
+
+  --color-text-primary: white;
+  --color-text-secondary: #ecc481;
+  --color-text-secondary-dark: #4a4231;
+
+  --font-size-body1: 1rem;
+  --font-size-body2: 1.1875rem;
+}

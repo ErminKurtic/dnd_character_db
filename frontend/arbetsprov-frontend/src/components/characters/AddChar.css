@@ -1,0 +1,165 @@
+.addchar-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 7rem;
+}
+
+.formBox {
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgb(0 0 0 / 16%);
+  padding-left: 4rem;
+  padding-right: 4rem;
+  background-color: var(--color-bg-secondary-light);
+}
+
+.formBox__header {
+  padding: 1rem;
+}
+
+.formBox__title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.formBox__inputField,
+.formBox__inputField--description {
+  border: 3px solid var(--color-border-primary);
+  background-color: rgba(255, 255, 255, 0.692);
+  width: auto;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 200;
+  padding: 0.8rem 1rem 0.6rem;
+  transition: 0.1s ease-in background-color, 0.1s ease-in border-color;
+  margin-top: 0.5rem;
+}
+
+.formBox__inputField:hover,
+.formBox__inputField--description:hover {
+  background-color: white;
+}
+
+.formBox__inputField--description {
+  height: 100px;
+}
+
+/* - - - BUTTONS - - - */
+
+.formBox__button--submit,
+.formBox__button--cancel {
+  appearance: none;
+  background-color: #fafbfc;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.formBox__button--submit:hover {
+  background-color: #76873c;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  color: white;
+  border-color: var(--color-border-secondary);
+}
+.formBox__button--cancel:hover {
+  background-color: #982420;
+  text-decoration: none;
+  transition-duration: 0.1s;
+  color: white;
+  border-color: var(--color-border-secondary);
+}
+
+.formBox__button--submit:disabled,
+.formBox__button--cancel:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.formBox__button--submit:active {
+  background-color: #acbe6f;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+.formBox__button--cancel:active {
+  background-color: #c45c58;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.formBox__button--submit:focus,
+.formBox__button--cancel:focus {
+  outline: 1px transparent;
+}
+
+.formBox__button--submit:before,
+.formBox__button--cancel:before {
+  display: none;
+}
+
+.formBox__button--submit:-webkit-details-marker,
+.formBox__button--cancel:-webkit-details-marker {
+  display: none;
+}
+
+/* - - - MEDIA QUERY - - - */
+
+@media screen and (max-width: 600px) {
+  .formBox {
+    width: 150px;
+    justify-content: center;
+    margin-left: 2rem;
+  }
+
+  .formBox__header {
+    line-break: loose;
+  }
+
+  .formBox__inputField {
+    width: 200px;
+    align-self: center;
+    font-size: small;
+  }
+
+  .formBox__inputField--description {
+    width: 200px;
+    align-self: center;
+    font-size: small;
+  }
+
+  .formbox__button--wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  .formBox__button--submit,
+  .formBox__button--cancel {
+    margin-bottom: 1.5rem;
+  }
+}
