@@ -54,8 +54,9 @@ const AddChar = () => {
           </div>
 
           <div className="formBox__title">
-            <label>Character description</label>
+            <label>Character description (Max 30 characters)</label>
             <textarea
+              maxLength={30}
               className="formBox__inputField--description"
               placeholder="Describe your character..."
               name="charDescription"
